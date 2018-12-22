@@ -1,0 +1,5 @@
+Use:
+#+BEGIN_SRC shell
+paste -s file | awk '{$2=$2};1'
+#+END_SRC
+To merge lines from file into one superstring.
