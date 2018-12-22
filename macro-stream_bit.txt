@@ -1,0 +1,1 @@
+$puts(stream_bit,$if($not($or($strcmp($info(bitspersample),),$strcmp($info(bitspersample),'16'))),$info(bitspersample)' bit'))

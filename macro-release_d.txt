@@ -1,0 +1,1 @@
+$puts(release_d,$if($strcmp($get(originally_released),%date%),'original',%date%))

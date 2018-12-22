@@ -1,0 +1,1 @@
+$puts(originally_released,$if3(%original release date%,%originaldate%,%originalyear%,%date%))

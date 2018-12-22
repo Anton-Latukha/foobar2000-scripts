@@ -1,0 +1,1 @@
+$puts(stream_ch,$ifequal($info(channels),2,,$channels()))

@@ -1,0 +1,1 @@
+$puts(stream_specs,[$get(stream_kHz), ][$get(stream_bit), ][$get(stream_ch), ])

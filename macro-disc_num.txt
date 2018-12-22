@@ -1,0 +1,1 @@
+$puts(disc_num,$ifequal(%discnumber%,1,$ifgreater(%totaldiscs%,1,%discnumber%,),[%discnumber%]))

@@ -1,0 +1,1 @@
+$puts(stream_kHz,$if($and($not($strcmp(%samplerate%,'44100')),$not($strcmp(%samplerate% %codec%,'48000 Opus'))),$left(%samplerate%,$sub($len(%samplerate%),3)) kHz))
