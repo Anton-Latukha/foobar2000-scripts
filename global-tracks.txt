@@ -1,0 +1,25 @@
+$puts(originally_released,$if3(%original release date%,%originaldate%,%originalyear%,%date%))
+
+
+$puts(release_d,$if($strcmp($get(originally_released),%date%),'original',%date%))
+
+
+$puts(identifier,$if3(%catalognumber%,%catalog%,%barcode%,%asin%,%serial%,%musicbrainz_discid%,%discogs_catalog%,%musicbrainz_albumid%,))
+
+
+$puts(disc_num,$ifequal(%discnumber%,1,$ifgreater(%totaldiscs%,1,%discnumber%,),[%discnumber%]))
+
+
+$puts(stream_kHz,$if($and($not($strcmp(%samplerate%,'44100')),$not($strcmp(%samplerate% %codec%,'48000 Opus'))),$left(%samplerate%,$sub($len(%samplerate%),3)) kHz))
+
+
+$puts(stream_ch,$ifequal($info(channels),2,,$channels()))
+
+
+$puts(stream_bit,$if($not($or($strcmp($info(bitspersample),),$strcmp($info(bitspersample),'16'))),$info(bitspersample)' bit'))
+
+
+$puts(stream_specs,[$get(stream_kHz), ][$get(stream_bit), ][$get(stream_ch), ])
+
+
+[$info(encoding)\][%superartist%]\[%album artist%]\[%releasetype%]\[$get(originally_released). ][%album%][' ('[$get(release_d), ][%releaseedition%, ][$get(stream_specs)][$get(identifier)]')']\[$get(disc_num).][%track%. ][%title%]
