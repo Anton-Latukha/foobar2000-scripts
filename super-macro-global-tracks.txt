@@ -1,0 +1,1 @@
+[$info(encoding)]\[[%superartist%][%album artist%]\][$get(originally_released). ][%album%] - [$get(disc_num).][%track%. ][%title%][' ('[%releasetype%, ][$get(release_d), ][%releaseedition%, ][$get(stream_specs)][$get(identifier)]')']
