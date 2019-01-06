@@ -3,3 +3,5 @@ Use:
 paste -s file | awk '{$2=$2};1'
 #+END_SRC
 To merge lines from file into one superstring.
+
+1) If tracks on cd have different peaks - that means that disc is probably done from master tape.
