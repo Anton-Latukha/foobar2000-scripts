@@ -1,1 +1,1 @@
-$puts(identifier,$if3(%catalognumber%,%catalog%,%barcode%,%asin%,%serial%,%musicbrainz_discid%,%discogs_catalog%,%musicbrainz_albumid%,))
+$puts(identifier,$if3(%catalognumber%,%catalog%,%barcode%,%asin%,%serial%,%musicbrainz_discid%,%discogs_catalog%,%musicbrainz_albumid%,%discid%,))
