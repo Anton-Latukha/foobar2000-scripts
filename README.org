@@ -6,4 +6,7 @@ To merge lines from file into one superstring.
 
 Ready example presets are in the =shell= scripts.
 
-1) If tracks on cd have different peaks - that means that disc is probably done from master tape.
+Suggestions:
+1) If tracks on CD have different peaks - that means that disc is probably done from the master tape.
+2) The longer the master tape was laying around - the worse it gets, the less dynamic range it has.
+3) Generally the older CDs have better mastering, and acoustic master tape source was in better quality.
