@@ -1,0 +1,7 @@
+This groups audio tracks into consistent albums and shows info in convinient way.
+
+The only way to show info in columns I found, is to hardcode the left alignment in chars, so the playlist grouping consistently appears when playlist uses the monospace font.
+
+The additional spaces between columns are populated with spaces, and then spaces cut-off where next column should be inserted.
+
+$puts(stream_kHz,$if($and($not($strcmp(%samplerate%,'44100')),$not($strcmp(%samplerate% %codec%,'48000 Opus'))),$left(%samplerate%,$sub($len(%samplerate%),3)))) $puts(stream_ch,$ifequal($info(channels),2,,$info(channels))) $puts(stream_bit,$if($not($or($strcmp($info(bitspersample),),$strcmp($info(bitspersample),'16'))),'×'$info(bitspersample))) $puts(stream_specs,[$get(stream_kHz)][$get(stream_bit)]['×'$get(stream_ch)]) $puts(originally_released,$if3(%original release date%,%originaldate%,%originalyear%,%date%)) [$cut([$cut([$cut([$cut([$cut([[%album artist% - ]['['$get(originally_released)']' ][%album%]'                                                                                                                                                                     '],80)][%RELEASETYPE%]'                                                 ',90)]['| '$if($strcmp($get(originally_released),%date%),'original',%date%)]'                       ',102)]['| '[$get(stream_specs) ][%codec%]]'                      ',120)]['| '%ALBUM DYNAMIC RANGE%]'                      ',125)]['|'[ %replaygain_album_gain%][, %replaygain_album_peak%]]
